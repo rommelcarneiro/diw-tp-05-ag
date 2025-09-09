@@ -12,7 +12,7 @@ jobs:
   grading:
     permissions: write-all
     runs-on: ubuntu-latest
-    if: github.actor != 'github-classroom[bot]' && github.actor != 'rommelcarneiro'
+    if: github.actor != 'github-classroom[bot]' && github.actor != 'rommelcarneiro' 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,7 +20,7 @@ jobs:
            path: submission
 
       - name: Check repository criteria 
-        uses: webtech-network/autograder@v2
+        uses: webtech-network/autograder@v3
         with: 
           template_preset : "web dev"
           feedback-type: "default"
